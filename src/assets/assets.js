@@ -1,17 +1,17 @@
-import pic1 from    './images/pic1.jpg';
-import pic2 from    './images/pic2.jpg';
-import pic3 from    './images/pic3.jpg';
-import pic4 from    './images/pic4.jpg';    
-import pic5 from    './images/pic5.jpg';
-import pic6 from    './images/pic6.jpg';
-import pic7 from    './images/pic7.jpg';
-import pic8 from    './images/pic8.jpg';
-import pic9 from    './images/pic9.jpg';
-import pic10 from   './images/pic10.jpg';
-import pic11 from   './images/pic11.jpg';
-import pic12 from   './images/pic12.jpg';
-import pic13 from   './images/pic13.jpg';
-import logo from   './images/logo.png';
+import pic1 from "./pic1.jpg";
+import pic2 from "./pic2.png";
+import pic3 from "./pic3.png";
+import pic4 from "./pic4.png";
+import pic5 from "./pic5.jpg";
+import pic6 from "./pic6.webp";
+import pic7 from "./pic7.png";
+import pic8 from "./pic8.jpg";
+import pic9 from "./pic9.jpg";
+import pic10 from "./pic10.jpg";
+import pic11 from "./pic11.jpg";
+import pic12 from "./pic12.jpg";
+import pic13 from "./pic13.jpg";
+import logo from "./logo.jpeg";
 
 
 export const assets = {

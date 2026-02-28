@@ -1,0 +1,273 @@
+/* ═══════════════════════════════════════════════════
+   QUICKINVOICE  —  PREMIUM NAVBAR
+   Theme: Gold + Black  ·  Dark glass background
+═══════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ─── SHELL ─────────────────────────────────────── */
+.mb-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  background: rgba(7, 12, 24, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.45);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* gradient accent line — now GOLD */
+.mb-accent-line {
+  height: 1.5px;
+  background: linear-gradient(
+    90deg,
+    transparent          0%,
+    rgba(245,158,11,.8)  25%,
+    rgba(217,119, 6,.9)  55%,
+    rgba(251,191,36,.6)  75%,
+    transparent          100%
+  );
+}
+
+/* ─── INNER ROW ──────────────────────────────────── */
+.mb-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ─── BRAND ──────────────────────────────────────── */
+.mb-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.mb-brand-text {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  /* Gold gradient on brand name */
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity .2s;
+}
+.mb-brand:hover .mb-brand-text { opacity: .8; }
+
+/* ─── MAIN NAV LINKS ─────────────────────────────── */
+.mb-main-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ─── SECONDARY NAV LINKS ────────────────────────── */
+.mb-secondary-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+/* ─── SHARED LINK STYLE ──────────────────────────── */
+.mb-link {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 13px;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .18s, background .18s;
+}
+.mb-link:hover {
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, .05);
+  text-decoration: none;
+}
+
+/* dimmer variant for About / Contact */
+.mb-link-dim {
+  color: #64748b;
+  font-size: 14px;
+}
+.mb-link-dim:hover { color: #94a3b8; }
+
+/* ── ACTIVE STATE — GOLD ── */
+.mb-link-active {
+  color: #f59e0b !important;
+  background: rgba(245, 158, 11, .12);
+  font-weight: 600;
+}
+.mb-link-active:hover {
+  background: rgba(245, 158, 11, .18) !important;
+  color: #f59e0b !important;
+}
+
+/* glowing GOLD active dot */
+.mb-active-dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 8px 2px rgba(245, 158, 11, .85);
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ─── CTA BUTTON — GOLD ──────────────────────────── */
+.mb-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a !important;          /* dark text on gold bg */
+  text-decoration: none !important;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  box-shadow: 0 4px 18px rgba(245, 158, 11, .38);
+  letter-spacing: .1px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s, filter .2s;
+  margin-left: 6px;
+}
+.mb-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,.22) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity .2s;
+}
+.mb-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(245, 158, 11, .55);
+  filter: brightness(1.08);
+  text-decoration: none;
+}
+.mb-cta:hover::after { opacity: 1; }
+
+.mb-cta span {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* ─── HAMBURGER ──────────────────────────────────── */
+.mb-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid rgba(245, 158, 11, .3);
+  background: transparent;
+  cursor: pointer;
+  margin-left: auto;
+  transition: background .2s, border-color .2s;
+}
+.mb-hamburger:hover {
+  background: rgba(245, 158, 11, .08);
+  border-color: rgba(245, 158, 11, .6);
+}
+.mb-hamburger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: #94a3b8;
+  border-radius: 2px;
+  transition: background .2s;
+}
+.mb-hamburger:hover span { background: #f59e0b; }
+
+/* ─── MOBILE DROPDOWN ────────────────────────────── */
+.mb-mobile-menu {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(245, 158, 11, .2);
+  background: rgba(7, 12, 24, .98);
+}
+
+.mb-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mb-mobile-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color .18s, background .18s;
+}
+.mb-mobile-link:hover {
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, .05);
+  text-decoration: none;
+}
+
+/* active mobile link — GOLD */
+.mb-mobile-link-active {
+  color: #f59e0b !important;
+  background: rgba(245, 158, 11, .12);
+  font-weight: 600;
+}
+
+.mb-cta-mobile {
+  width: 100%;
+  justify-content: center;
+  margin-left: 0;
+  border-radius: 12px;
+}
+
+/* ─── HIDE DESKTOP NAV ON MOBILE ─────────────────── */
+@media (max-width: 991px) {
+  .mb-main-links,
+  .mb-secondary-links {
+    display: none !important;
+  }
+}
